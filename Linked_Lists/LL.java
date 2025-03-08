@@ -136,9 +136,9 @@ public class LL {
         linkedList.display();
         linkedList.insertAtBeginning(0);
         linkedList.display();
-        linkedList.insertAtPosition(1, 1);
+        linkedList.insertAtPosition(4, 1);
         linkedList.display(); // Output: 0 1 1 2
-        linkedList.deleteByValue(1);
+        linkedList.deleteByValue(2);
         linkedList.display(); // Output: 0 1 2
         linkedList.reverse();
         linkedList.display(); // Output: 2 1 0

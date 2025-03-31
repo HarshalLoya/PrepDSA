@@ -22,17 +22,18 @@ public class PrintAllPermutations {
     //         }
     //     }
     // }
-    // approach 2
+
+    // appraoch 2: TC->O(N*N!) as we are generating all permutations
+    // SC-> O(N) for list and array and O(N) for recursion stack as there are a max of N numbers to permute so overall SC: O(N)
+    // We do not use any extra data structure like we did in the previous approach
     public static void allPermutations(int[] arr, int n, int i) {
         if (i == n) {
             System.out.println(Arrays.toString(arr));
             return;
         }
         for (int j = i; j < n; j++) {
-            // swap arr[i] and arr[j]
             swap(arr, i, j);
             allPermutations(arr, n, i + 1);
-            // backtrack
             swap(arr, i, j);
         }
     }
